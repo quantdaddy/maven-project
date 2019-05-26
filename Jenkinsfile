@@ -17,7 +17,7 @@ pipeline {
         build job: 'deploy-to-staging'
       }
     }
-    state('Deploy to prod') {
+    stage('Deploy to prod') {
       steps {
         timeout(time: 5, unit: 'DAYS') {
           input message:'Approve PRODUCTION deployment?'
